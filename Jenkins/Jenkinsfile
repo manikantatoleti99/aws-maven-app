@@ -21,7 +21,7 @@ pipeline {
         stage('App-Build') {
             steps {
                 sh 'mvn clean package'
-                sh 'sleep 100'
+                //sh 'sleep 100'
             }
             }
         stage('Docker Build & Push') {
