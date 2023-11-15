@@ -9,7 +9,7 @@ pipeline {
                 timestamps()
                 buildDiscarder(logRotator(numToKeepStr: '1', artifactNumToKeepStr: '1'))
                 timeout(time: 1, unit: 'MINUTES')
-                //disableConcurrentBuilds()
+                disableConcurrentBuilds()
                 }
 
     stages {
@@ -21,6 +21,7 @@ pipeline {
         stage('App-Build') {
             steps {
                 sh 'mvn clean package'
+                sh 'sleep 100'
             }
             }
         stage('Docker Build & Push') {
