@@ -35,8 +35,8 @@ pipeline {
 			}
 
             }   
-                sh 'docker build . -t pylifedevops/cicd:v2'
-                sh 'docker push pylifedevops/cicd:v2'
+                sh 'docker build . -t pylifedevops/cicd:v3'
+                sh 'docker push pylifedevops/cicd:v3'
                 echo "Job is successfully completed and Thank you"
             }                        
         }
