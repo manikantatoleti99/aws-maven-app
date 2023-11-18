@@ -68,7 +68,7 @@ pipeline {
                     echo "kubernetes deployment is done"
 
                     sh 'kubectl get deployments'
-                    sh 'sleep 100 ; kubectl get services'
+                    sh 'kubectl get services'
                     
                     }
 
